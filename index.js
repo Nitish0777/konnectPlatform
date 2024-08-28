@@ -12,8 +12,11 @@ import documentRoutes from "./routes/documentRoute.js";
 dotenv.config();
 
 
-//middleware
+// Enable CORS for all routes
 app.use(cors());
+
+// Allow preflight requests for all routes
+app.options('*', cors());
 
 
 //importing db
