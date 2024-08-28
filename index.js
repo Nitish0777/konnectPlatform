@@ -19,7 +19,7 @@ const app = express();
 //middleware
 app.use(
   cors({
-    origin: ["https://konnect-three.vercel.app"],
+    origin: ["https://konnect-dashboard-frontend.vercel.app/"],
     methods: ["GET", "POST"],
     credentials: true,
   })
