@@ -18,11 +18,7 @@ const app = express();
 
 //middleware
 app.use(
-  cors({
-    origin: ["https://konnect-dashboard-frontend.vercel.app/"],
-    methods: ["GET", "POST"],
-    credentials: true,
-  })
+  cors()
 );
 app.use(express.json());
 app.use(morgan("dev"));
