@@ -11,16 +11,17 @@ import documentRoutes from "./routes/documentRoute.js";
 //configuring dotenv
 dotenv.config();
 
-
-//middleware
-app.use(cors());
-
-
 //importing db
 db();
 
 const app = express();
 
+//middleware
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 app.use(express.json());
 app.use(morgan("dev"));
